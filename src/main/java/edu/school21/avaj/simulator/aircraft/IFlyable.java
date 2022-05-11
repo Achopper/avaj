@@ -1,9 +1,9 @@
 package edu.school21.avaj.simulator.aircraft;
 
-import com.sun.deploy.association.RegisterFailedException;
-import edu.school21.avaj.simulator.tower.weatherTower.WeatherTower;
+import edu.school21.avaj.simulator.application.WeatherTower;
+import edu.school21.avaj.simulator.exeptions.RegistrationFailException;
 
 public interface IFlyable {
-    void updateConditions();
-    void registerTower(WeatherTower weatherTower) throws RegisterFailedException;
+    void updateConditions() throws RegistrationFailException;
+    void registerTower(WeatherTower weatherTower) throws RegistrationFailException;
 }

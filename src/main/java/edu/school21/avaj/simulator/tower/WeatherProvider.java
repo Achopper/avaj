@@ -1,4 +1,4 @@
-package edu.school21.avaj.simulator.tower.weatherTower;
+package edu.school21.avaj.simulator.tower;
 
 import edu.school21.avaj.simulator.aircraft.Coordinates;
 
@@ -8,7 +8,9 @@ public class WeatherProvider {
     private static WeatherProvider      _instance;
     private static final String[]        WEATHER = {"RAIN","FOG","SUN","SNOW"};
 
-    private WeatherProvider(){}
+    private WeatherProvider(){
+
+    }
 
     public static WeatherProvider get_instance() {
         if (_instance != null)

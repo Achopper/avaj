@@ -4,7 +4,7 @@ public class AirFactory {
 
     public static IFlyable newAircraft(String type, String name, int longitude, int latitude,int height){
         switch (type){
-            case ("Ballon"):
+            case ("Balloon"):
                 return new Balloon(name, new Coordinates(longitude, latitude, height));
             case ("JetPlane"):
                 return new JetPlane(name, new Coordinates(longitude, latitude, height));

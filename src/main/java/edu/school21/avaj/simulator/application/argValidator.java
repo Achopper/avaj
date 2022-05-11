@@ -26,6 +26,7 @@ public class argValidator {
                 throw new IllegalSimulationParametrs("Wrong simulation parameter: " + line);
             Main.args.add(line);
         }
+        br.close();
     }
 
     private boolean parseLine(String line){

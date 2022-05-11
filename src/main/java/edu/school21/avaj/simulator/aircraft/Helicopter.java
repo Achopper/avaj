@@ -1,7 +1,8 @@
 package edu.school21.avaj.simulator.aircraft;
 
-import com.sun.deploy.association.RegisterFailedException;
-import edu.school21.avaj.simulator.tower.weatherTower.WeatherTower;
+
+import edu.school21.avaj.simulator.application.WeatherTower;
+import edu.school21.avaj.simulator.exeptions.RegistrationFailException;
 
 //◦ SUN - Longitude increases with 10, Height increases with 2
 //◦ RAIN - Longitude increases with 5
@@ -16,7 +17,7 @@ public class Helicopter extends Aircraft implements IFlyable {
     }
 
     @Override
-    public void updateConditions() {
+    public void updateConditions() throws RegistrationFailException {
        String weather = _weatherTower.getWeather(_coordinates);
         String msg = "";
         switch (weather) {
@@ -45,12 +46,13 @@ public class Helicopter extends Aircraft implements IFlyable {
         if (!checkHeight(_coordinates.get_height())){
             _weatherTower.getMsg(getFullName() + "landing");
             _weatherTower.getMsg("Tower says: " + getFullName() + "unregistered from weather tower.");
+            _weatherTower.unregister(this);
         }
 
     }
 
     @Override
-    public void registerTower(WeatherTower weatherTower) throws RegisterFailedException {
+    public void registerTower(WeatherTower weatherTower) throws RegistrationFailException {
         _weatherTower = weatherTower;
         _weatherTower.register(this);
         _weatherTower.getMsg("Tower says: " + getFullName() + "registered to weather tower.");

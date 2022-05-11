@@ -4,7 +4,7 @@ public class Aircraft {
     protected long              _id;
     protected String            _name;
     protected Coordinates       _coordinates;
-    private static long         _idCounter = 0;
+    private static long         _idCounter = 1;
 
     protected Aircraft(String name, Coordinates coordinates){
         _id = nextId();
