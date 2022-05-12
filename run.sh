@@ -15,7 +15,7 @@ rm -f result.txt
 cd ./src/main/java
 find . -name "*.java" > sources.txt
 javac  @sources.txt
-cp ../resources/simulation.txt .
-java edu.school21.avaj.simulator.application.Main simulation.txt
-rm simulation.txt sources.txt
+cp ../resources/MD5_simulation.txt .
+java edu.school21.avaj.simulator.application.Main MD5_simulation.txt
+rm MD5_simulation.txt sources.txt
 find . -name "*.class" -type f -delete

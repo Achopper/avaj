@@ -15,8 +15,7 @@ public class Main {
     public static Integer               numOfSimulations;
     public static ArrayList<String>     args = new ArrayList<>();
     private static final WeatherTower   TOWER = new WeatherTower();
-    public static final AirFactory FACTORY = new AirFactory();
-    public static BufferedWriter writer;
+    public static BufferedWriter        writer;
 
     public static void main(String[] args) {
         try {
