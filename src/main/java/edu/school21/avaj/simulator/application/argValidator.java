@@ -17,7 +17,6 @@ public class argValidator {
     public void validate(String path) throws IOException, NoSuchAlgorithmException {
         String line;
         Optional<InputStream> in = Optional.ofNullable(argValidator.class.getResourceAsStream(path));
-        System.out.println(path);
         BufferedReader br = new BufferedReader(new InputStreamReader(in.orElseThrow(() -> new FileNotFoundException("File not found"))));
         ArrayList<String> types = new ArrayList<>(Arrays.asList(TYPES));
         while ((line = br.readLine()) != null) {
