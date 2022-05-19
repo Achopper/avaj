@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
 
- sleep 1
  printf "\033[31m3\n\033[0m"
  sleep 1
  printf "\033[33m2\n\033[0m"

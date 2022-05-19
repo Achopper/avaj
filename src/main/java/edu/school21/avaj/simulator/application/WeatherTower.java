@@ -13,7 +13,7 @@ public class WeatherTower extends Tower {
         return WeatherProvider.get_instance().getCurrentWeather(coordinates);
     }
 
-    void changeWeather() throws RegistrationFailException {
+    void changeWeather() throws RegistrationFailException, IOException {
         conditionChange();
     }
 

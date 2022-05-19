@@ -42,7 +42,7 @@ public class Main {
             obj.registerTower(TOWER);
         }
         for (; numOfIterations > 0; --numOfIterations){
-         writer.append("------------------SIMULATION #").append(String.valueOf(numOfIterations)).append("----------------------------\n");
+         writer.append("---------------------SIMULATION #").append(String.valueOf(numOfIterations)).append("-------------------------\n");
                TOWER.changeWeather();
             }
 
